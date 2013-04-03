@@ -1,7 +1,7 @@
 [Unit]
 Description=Set up opacity
-After=fvwm.target
-Wants=fvwm.target
+After=window-manager.target
+Wants=window-manager.target
 
 [Service]
 Type=oneshot

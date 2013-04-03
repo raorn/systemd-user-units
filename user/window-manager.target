@@ -1,0 +1,8 @@
+[Unit]
+Description=Window Manager
+Wants=window-manager.service
+After=window-manager.service
+AllowIsolate=true
+
+[Install]
+WantedBy=default.target
