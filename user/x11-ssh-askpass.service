@@ -1,0 +1,10 @@
+[Unit]
+Description=X11-based pass-phrase dialog for use with OpenSSH
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/systemctl --user set-environment SSH_ASKPASS=/usr/libexec/openssh/x11-ssh-askpass
+
+[Install]
+Alias=ssh-askpass.service
