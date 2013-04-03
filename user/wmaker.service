@@ -1,6 +1,6 @@
 [Unit]
 Description=WindowMaker
-After=environment.target
+After=default.target
 
 [Service]
 EnvironmentFile=-/etc/locale.conf
