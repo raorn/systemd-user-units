@@ -17,3 +17,4 @@ RestartSec=1
 
 [Install]
 Alias=window-manager.service
+WantedBy=default.target
