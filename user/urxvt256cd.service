@@ -1,0 +1,11 @@
+[Unit]
+Description=RXVT-Unicode Daemon (256 colors version)
+Conflicts=urxvtd.service
+
+[Service]
+After=environment.target
+Wants=environment.target
+ExecStart=/usr/bin/urxvt256cd -q -o
+
+[Install]
+WantedBy=default.target
