@@ -4,7 +4,7 @@ After=environment.target
 Wants=environment.target
 
 [Service]
-ExecStart=/usr/bin/xscreensaver --no-splash
+ExecStart=/usr/bin/xscreensaver
 KillMode=process
 
 [Install]
