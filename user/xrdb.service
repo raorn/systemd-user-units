@@ -1,0 +1,12 @@
+[Unit]
+Description=Setup X resources
+Before=environment.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/xrdb -load /etc/X11/Xresources
+ExecStart=/usr/bin/xrdb -merge %h/.Xresources
+
+[Install]
+WantedBy=environment.target
