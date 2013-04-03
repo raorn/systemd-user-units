@@ -1,9 +1,9 @@
 [Unit]
 Description=RXVT-Unicode Daemon
-
-[Service]
 After=environment.target
 Wants=environment.target
+
+[Service]
 ExecStart=/usr/bin/urxvtd -q -o
 
 [Install]
