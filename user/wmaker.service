@@ -4,6 +4,7 @@ After=environment.target
 
 [Service]
 EnvironmentFile=-/etc/locale.conf
+EnvironmentFile=-%h/.config/locale.conf
 ExecStart=/usr/bin/wmaker
 KillMode=process
 Restart=always

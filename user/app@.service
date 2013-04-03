@@ -5,6 +5,7 @@ IgnoreOnIsolate=yes
 
 [Service]
 EnvironmentFile=-/etc/locale.conf
+EnvironmentFile=-%h/.config/locale.conf
 ExecStart=/usr/bin/env %i
 
 KillMode=process

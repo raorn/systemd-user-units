@@ -9,6 +9,7 @@ After=environment.target
 
 [Service]
 EnvironmentFile=-/etc/locale.conf
+EnvironmentFile=-%h/.config/locale.conf
 ExecStart=/usr/bin/fvwm
 KillMode=process
 Restart=always

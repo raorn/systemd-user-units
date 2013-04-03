@@ -3,6 +3,7 @@ Description=Notification Daemon
 
 [Service]
 EnvironmentFile=-/etc/locale.conf
+EnvironmentFile=-%h/.config/locale.conf
 ExecStart=/usr/libexec/notification-daemon
 
 [Install]
