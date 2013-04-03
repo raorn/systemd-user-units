@@ -6,7 +6,8 @@ After=ssh-agent.service ssh-askpass.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/bin/ssh-add -c
+ExecStartPre=/usr/bin/ssh-add -c
+ExecStart=/bin/true
 
 [Install]
 WantedBy=default.target
