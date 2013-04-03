@@ -1,0 +1,12 @@
+[Unit]
+Description=Add private keys to ssh agent
+Wants=ssh-agent.service ssh-askpass.service
+After=ssh-agent.service ssh-askpass.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/ssh-add -c
+
+[Install]
+WantedBy=default.target
