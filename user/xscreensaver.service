@@ -1,0 +1,8 @@
+[Unit]
+Description=XScreenSaver
+
+[Service]
+After=environment.target
+Wants=environment.target
+ExecStart=/usr/bin/xscreensaver --no-splash
+KillMode=process
