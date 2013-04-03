@@ -1,0 +1,11 @@
+[Unit]
+Description=Setup X resources
+Before=environment.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/xrandr --fbmm 260x162
+
+[Install]
+WantedBy=environment.target
