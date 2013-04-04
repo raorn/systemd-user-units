@@ -1,19 +1,15 @@
 [Unit]
 Description=PulseAudio Sound System
-
-[Service]
-#BusName=org.PulseAudio1
-BusName=org.pulseaudio.Server
-#Type=forking
-#ExecStart=/usr/bin/pulseaudio --start
 After=sound.target
 Requires=sound.target
-ExecStart=/usr/bin/pulseaudio
-ExecStop=/usr/bin/pulseaudio --kill
 
-Restart=always
+[Service]
+Type=forking
+ExecStart=/usr/bin/pulseaudio --start
+ExecStartPost=/usr/bin/pactl load-module module-x11-publish
+ExecStartPost=/usr/bin/pactl load-module module-x11-cork-request
+#ExecStartPost=/usr/bin/pactl load-module module-x11-xsmp
+ExecStop=/usr/bin/pulseaudio --kill
 
 [Install]
 WantedBy=default.target
-#Alias=dbus-org.PulseAudio1.service
-#Alias=dbus-org.pulseaudio.Server.service
