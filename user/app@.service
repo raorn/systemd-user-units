@@ -1,6 +1,6 @@
 [Unit]
 Description=Application "%i"
-After=environment.target
+After=default.target
 IgnoreOnIsolate=yes
 
 [Service]
@@ -9,3 +9,6 @@ EnvironmentFile=-%h/.config/locale.conf
 ExecStart=/usr/bin/env %i
 
 KillMode=process
+
+[Install]
+WantedBy=default.target
